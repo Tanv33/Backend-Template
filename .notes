@@ -1,0 +1,60 @@
+{
+    username: "artin",
+    password: "",
+    user_type: "admin"
+}
+
+Artin (Admin) => Create Lab
+{
+   lab_detail: {
+       lab_name: "ASL",
+       lab_logo: "rejihrjeh",
+       lab_id: 203920
+       test_types: ["PCR","Anty Body","FALAH FALAH"],
+       patients_data: ["name","email","phone","FALAH FALAH"]
+   },
+   manager: {
+       username: "ghous",
+       job_id: 001,
+       password: "123456",
+       email: "ghous@gmail.com",
+       location: {
+           name: "Royal Mint",
+           id: 3232323,
+           address: "Money heist"
+       }
+   },
+   
+}
+
+Ghous (Manger of ASL) => Create Other Locations
+{
+    name: "Royal Mint",
+    id: 3232323,
+    address: "Money heist",
+}
+
+Ghous (Manger of ASL) => Create Other test_types
+{
+    name: "PCR FALAH",
+}
+
+
+Employe Singup 
+{
+    ...https://asl.stopthevirus.health/signup
+}
+
+Medical Professional 
+{
+
+}
+
+Lab Technician
+{
+
+}
+
+Patient {
+    patients_data: ["name","email","phone","FALAH FALAH"]
+}
