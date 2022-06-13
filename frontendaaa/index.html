@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Frontend</h1>
+		<button onclick="callXumApi()">Connect Xumm</button>
+		<div id="saqib"></div>
+	</body>
+	<script>
+		const imgDiv = document.getElementById("saqib");
+		async function callXumApi() {
+			fetch("http://localhost:5000/connect-xumm")
+				.then((response) => response.json())
+				.then((data) => {
+					console.log(data);
+					imgDiv.innerHTML = `<img src=${data.data}/>`;
+					// window.open(data.next.always, "_blank");
+				});
+			// console.log(call.json());
+		}
+	</script>
+	<!-- <script src="app1.js" > -->
+</html>
