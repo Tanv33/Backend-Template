@@ -14,7 +14,7 @@ function App() {
 	const [result, setResult] = useState("");
 	const connectWallet = async () => {
 		// console.log("Nice");
-		const getImg = await axios.get(`http://localhost:5000/connect-xumm/${socketId}`);
+		const getImg = await axios.get(`http://localhost:5000/api/v1/xumm/signIn/${socketId}`);
 		console.log(getImg.data);
 		setCumImg(getImg.data.message);
 	};
@@ -41,6 +41,7 @@ function App() {
 			console.log(data);
 		});
 		socket.on("result", (data) => {
+			console.log(data);
 			setResult(data);
 			setAccountAddress(data.response.account);
 			// token dbe22deb-bc6c-4e35-ac0a-fe9cd3305a04

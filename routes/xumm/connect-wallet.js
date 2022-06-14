@@ -49,9 +49,9 @@ const connectWallet = async (req, res) => {
 			 * user token, we can use to send our next payload per Push notification
 			 */
 			const result = await Sdk.payload.get(resolveData.payload_uuidv4);
-			console.log("result:", result);
-			console.log("User token:", result.application.issued_user_token);
-			req.io.to(req.params.id).emit("result", result);
+			console.log("result:", result, "========>");
+			console.log("User token:", result.application.issued_user_token, "==========>");
+			req.io.to(req.params.socketId).emit("result", result);
 		}
 	} catch (e) {
 		console.log(e);
