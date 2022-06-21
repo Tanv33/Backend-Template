@@ -11,6 +11,10 @@ const userSchema = new mongoose.Schema(
 			type: schemaType.TypeString
 			// required: true,
 		},
+		address: {
+			type: schemaType.TypeString,
+			unique: true
+		},
 		username: {
 			type: schemaType.TypeString
 			// required: true,

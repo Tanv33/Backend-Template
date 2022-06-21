@@ -15,7 +15,7 @@ const insertNewDocument = async (modelDb, storeObj) => {
 };
 
 const updateDocument = async (modelDb, updateQuery, setQuery) =>
-	await Models[modelDb].findOneAndUpdate(updateQuery, { $set: setQuery }, { new: true });
+	await Models[modelDb].findOneAndUpdate(updateQuery, { $set: setQuery }, { new: true }).lean();
 
 const customUpdate = async (modelDb, updateQuery, setQuery) =>
 	await Models[modelDb].updateOne(updateQuery, setQuery);

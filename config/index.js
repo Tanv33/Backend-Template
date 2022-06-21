@@ -11,5 +11,8 @@ module.exports = {
 	MAIL_USER: process.env.MAIL_USER,
 	MAIL_PASS: process.env.MAIL_PASS,
 	XUM_KEY: process.env.XUM_KEY,
-	XUM_SECRET: process.env.XUM_SECRET
+	XUM_SECRET: process.env.XUM_SECRET,
+	cloud_name: process.env.cloud_name,
+	api_key: process.env.api_key,
+	api_secret: process.env.api_secret
 };
