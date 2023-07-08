@@ -1,5 +1,5 @@
 
-# Node.jS MVC Backend Template 
+# Node.js MVC Backend Template 
 
 I have created a simple Node.js MVC (Model-View-Controller) backend template. This template serves as a basic starting point for building Node.js applications using the MVC architectural pattern.
 
